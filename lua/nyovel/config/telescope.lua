@@ -37,4 +37,4 @@ require("telescope").setup {
 }
 require("telescope").load_extension("ui-select")
 
-
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
