@@ -18,9 +18,9 @@ require("lazy").setup("nyovel.plugins")
 
 require('nyovel.config.telescope')
 require('nyovel.config.treesitter')
-require('nyovel.config.lsp')
 require('nyovel.config.null-ls')
 require('nyovel.config.comp')
+require('nyovel.config.lsp')
 
 vim.g.sourcegraph_token = 'sgp_636f79ad2075640f_986c3b61b761ece27960d80a73ac87391bf5afca'
 

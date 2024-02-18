@@ -15,9 +15,19 @@ return {
       vim.api.nvim_set_keymap('n', '<C-l>', '<Cmd>TmuxNavigateRight<CR>', { noremap = true, silent = true })
     end
   },
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-rhubarb' },
+  { 'tpope/vim-sleuth' },
   {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter'
-  }
+    -- Add indentation guides even on blank lines
+    'lukas-reineke/indent-blankline.nvim',
+    -- Enable `lukas-reineke/indent-blankline.nvim`
+    -- See `:help ibl`
+    main = 'ibl',
+    opts = {},
+  },
+  { 'folke/which-key.nvim', opts = {} },
+  { 'mbbill/undotree' },
+  { 'github/copilot.vim' },
 }
 
