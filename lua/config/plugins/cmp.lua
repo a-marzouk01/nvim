@@ -20,8 +20,8 @@ return {
             },
             completion = {
                 completeopt = 'menu,menuone,noinsert', 
-                autocomplete = false,
-                auto_trigger = false,
+                -- autocomplete = false,
+                -- auto_trigger = false,
             },
             mapping = cmp.mapping.preset.insert {
                 ['<C-Space>'] = cmp.mapping.complete(),

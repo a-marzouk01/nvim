@@ -37,5 +37,19 @@ return {
             on_attach = on_attach,
             capabilities = capabilities
         })
+        lspconfig.arduino_language_server.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = {
+                "arduino-language-server",
+                "-cli", "arduino-cli",
+                "-cli-config", "/home/nyovel/.arduino15/arduino-cli.yaml",
+                "-fqbn", "arduino:avr:uno"
+            },
+            filetypes = { "ino" },
+            root_dir = function(fname)
+                return lspconfig.util.root_pattern("sketch.ino", ".git")(fname) or vim.fn.getcwd()
+            end,
+        })
     end
 }

@@ -19,4 +19,8 @@ return {
         end
     },
     { 'mbbill/undotree', cmd = 'UndotreeToggle' },
+    {
+        "tpope/vim-commentary",
+        lazy = false,
+    },
 }
