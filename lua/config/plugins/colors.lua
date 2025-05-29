@@ -1,10 +1,7 @@
 return {
-    {
+        {
         "rose-pine/neovim",
         name = "rose-pine",
-        config = function()
-            vim.cmd("colorscheme rose-pine")
-        end
     },
     {
         "catppuccin/nvim",
@@ -18,4 +15,11 @@ return {
         "blazkowolf/gruber-darker.nvim",
         name = "gruber-darker",
     },
+    {
+        'folke/tokyonight.nvim',
+        name = "tokyonight",
+        config = function()
+            vim.cmd("colorscheme tokyonight")
+        end
+    }
 }

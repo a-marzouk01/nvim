@@ -1,4 +1,11 @@
 return {
+    { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+    {
+        "folke/snacks.nvim"
+    },
+    {
+        "MeanderingProgrammer/render-markdown.nvim",
+    },
     {
         "j-hui/fidget.nvim",
         opts = {
@@ -18,9 +25,19 @@ return {
             vim.keymap.set('n', '<C-l>', '<Cmd>TmuxNavigateRight<CR>')
         end
     },
-    { 'mbbill/undotree', cmd = 'UndotreeToggle' },
+    {
+        "mbbill/undotree",
+        keys = {
+            {
+                "<leader>u",
+                function() vim.cmd("UndotreeToggle") end,
+                desc = "Toggle Undotree",
+            },
+        },
+    },
     {
         "tpope/vim-commentary",
         lazy = false,
     },
+
 }
